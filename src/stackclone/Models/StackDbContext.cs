@@ -14,6 +14,12 @@ namespace stackclone.Models
         {
 
         }
-    }
+        public virtual DbSet<Question> Questions { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=StackClone;integrated security=True;");
+        }
+    }
 }

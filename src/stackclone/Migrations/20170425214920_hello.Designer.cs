@@ -8,9 +8,10 @@ using stackclone.Models;
 namespace stackclone.Migrations
 {
     [DbContext(typeof(StackDbContext))]
-    partial class UserDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170425214920_hello")]
+    partial class hello
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

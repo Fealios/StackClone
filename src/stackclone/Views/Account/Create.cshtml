@@ -1,0 +1,18 @@
+﻿
+@{ 
+    ViewData["Title"] = "New Quesion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model stackclone.Models.Question
+
+<h2>Post a new question</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.content)
+    @Html.EditorFor(model => model.content)
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to index", "Index")
