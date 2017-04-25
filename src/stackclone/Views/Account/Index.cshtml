@@ -4,6 +4,7 @@
 }
 
 @using System.Security.Claims
+@model IEnumerable<stackclone.Models.Question>
 
 <h2>Authentication with Identity</h2>
 <hr />
@@ -22,8 +23,10 @@ else
     <p>@Html.ActionLink("Log in", "Login")</p>
 }
 
-@foreach(var question in Model)
-{
-    <li>@question.content</li>
+<ul>
+    @foreach(var question in Model)
+    {
+        <li>@Html.ActionLink(question.content, "Details", "Question", new { id = question.id }, null)</li>
+    }
 
-}
+</ul>

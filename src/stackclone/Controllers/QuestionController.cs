@@ -20,9 +20,10 @@ namespace stackclone.Controllers
             _userManager = userManager;
             _db = db;
         }
-        public IActionResult Index()
+        public IActionResult Details(int id)
         {
-            return View(_db.Questions.ToList());
+            var thisQuestion = _db.Questions.FirstOrDefault(questions => questions.id == id);
+            return View(thisQuestion);
         }
     }
 }
