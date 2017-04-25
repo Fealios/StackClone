@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace stackclone.Models
 {
-    public class StackDbContext : DbContext
-    {
-        public StackDbContext()
-        {
+    //public class StackDbContext : DbContext
+    //{
+    //    public StackDbContext()
+    //    {
 
-        }
+    //    }
 
-    }
+    //}
 
     public class UserDbContext : IdentityDbContext<User>
     {
