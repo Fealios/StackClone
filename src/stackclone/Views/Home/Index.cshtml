@@ -1,1 +1,8 @@
-﻿<h1>You're on the home page</h1>
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Authentication with Identity</h2>
+<hr />
+<p>@Html.ActionLink("Register", "Register")</p>

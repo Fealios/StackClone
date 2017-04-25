@@ -7,7 +7,7 @@ using stackclone.Models;
 
 namespace stackclone.Migrations
 {
-    [DbContext(typeof(UserDbContext))]
+    [DbContext(typeof(StackDbContext))]
     [Migration("20170425162227_Initial")]
     partial class Initial
     {

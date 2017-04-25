@@ -8,6 +8,6 @@ namespace stackclone.Models
 {
     public class User : IdentityUser
     {
-
+        
     }
 }

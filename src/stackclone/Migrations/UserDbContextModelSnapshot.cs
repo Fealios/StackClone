@@ -7,7 +7,7 @@ using stackclone.Models;
 
 namespace stackclone.Migrations
 {
-    [DbContext(typeof(UserDbContext))]
+    [DbContext(typeof(StackDbContext))]
     partial class UserDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

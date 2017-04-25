@@ -24,10 +24,10 @@ namespace stackclone
         {
             services.AddMvc();
             services.AddEntityFramework()
-                .AddDbContext<UserDbContext>(options =>
+                .AddDbContext<StackDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<UserDbContext>()
+                .AddEntityFrameworkStores<StackDbContext>()
                 .AddDefaultTokenProviders();
         }
 
