@@ -1,3 +1,20 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model stackclone.Models.Question
 
 <h1>Welcome to the question's page</h1>
+
+@Html.DisplayFor(model => model.content)
+
+@using (Html.BeginForm("Create", "Question", FormMethod.Post))
+{
+    <input id="QuestionId" name="QuestionId" type="hidden" value="@Model.id" />
+    <label for="content">Enter Comment</label>
+    <input id="content" name="content" type="text" />
+
+    <input type="submit" value="Add Comment" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")
