@@ -22,3 +22,8 @@ else
     <p>@Html.ActionLink("Log in", "Login")</p>
 }
 
+@foreach(var question in Model)
+{
+    <li>@question.content</li>
+
+}
