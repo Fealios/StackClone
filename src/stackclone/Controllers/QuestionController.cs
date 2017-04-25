@@ -44,7 +44,7 @@ namespace stackclone.Controllers
             comment.user = currentUser;
             _db.Comments.Add(comment);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Account", null);
         }
     }
 }
